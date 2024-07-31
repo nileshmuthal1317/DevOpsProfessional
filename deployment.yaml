@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app
+  name: my-app-deployment
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: my-app
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: my_app_container
-        image: my_docker_image_001:latest
+        image: nileshmuthal1317/my_docker_image_001:latest
         ports:
         - containerPort: 80
