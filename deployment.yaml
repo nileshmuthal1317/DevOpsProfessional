@@ -13,7 +13,7 @@ spec:
         app: my-app
     spec:
       containers:
-      - name: my_app_container
+      - name: my-app-container
         image: nileshmuthal1317/my_docker_image_001:latest
         ports:
         - containerPort: 80
