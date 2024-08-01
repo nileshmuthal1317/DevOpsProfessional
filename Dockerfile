@@ -1,16 +1,8 @@
-# Use a base image with Apache
-FROM debian:latest
+# Use an official Apache HTTP Server as the base image
+FROM httpd:2.4
 
-# Install Apache
-RUN apt-get update && \
-    apt-get install -y apache2 && \
-    apt-get clean
-
-# Copy website files to the container
-COPY . /var/www/html
+# Copy the content of the website to the Apache server's root directory
+COPY . /usr/local/apache2/htdocs/
 
 # Expose port 80
 EXPOSE 80
-
-# Start Apache in the foreground
-CMD ["apache2ctl", "-D", "FOREGROUND"]
