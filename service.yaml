@@ -4,20 +4,7 @@ metadata:
   name: apache-service
 spec:
   selector:
-    app: apache
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
-  type: ClusterIP
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: custom-app-service
-spec:
-  selector:
-    app: custom-app
+    app: my-app
   ports:
   - protocol: TCP
     port: 80
